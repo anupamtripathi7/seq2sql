@@ -1,8 +1,15 @@
 # seq2sql
 
+<div style="size: 10px">
 Given a natural language question posed to retrieve information from a large database, the task is to translate this question to an equivalent SQL query, such that the execution of that query provides the user with the desired results. We have focussed our work on implementing a model that generalizes well for unseen data by limiting the problem to simple queries.
+</div>
+<br>
+This method, like our previous approaches, uses an encoder decoder architecture for the given task. There are multiple encoders and decoders used, which have the same model, but differ only because the input they get and the order in which they are called.
 
-This method, like our previous approaches, uses an encoder decoder architecture (Figure 3) for the given task. There are multiple encoders and decoders used, which have the same model, but differ only because the input they get and the order in which they are called.
+<div style="text-align: center;">
+<img src='imgs/encoders_and_decoders.png'/>
+Encodes and Decoders
+</div>
 
 4.3.1 Encoders
 
@@ -35,14 +42,7 @@ Constant Decoder: The where part of the query can have constants with whom the c
 And Or Decoder: This decoder predicts the keywords ‘AND’ and ‘OR’ in the where part of the SQL query. It calls the Column Decoder after it.
 
 
+The figure below shows the decoding procedure. Consider the example query given in it. First the root decoder will be called. It will intern call the keyword decoder and this procedure goes on until the terminating condition is encountered. The training done is teacher forced, so the next decoder will have the right answer from the previous decoder. 
 
-	
-Encoders and Decoders
-
-Fig 3 shows the decoding procedure. Consider the example query given in it. First the root decoder will be called. It will intern call the keyword decoder and this procedure goes on until the terminating condition is encountered. The training done is teacher forced, so the next decoder will have the right answer from the previous decoder. 
-
-
-
-
-
+<img src='imgs/decoding_process.png'/>
 Decoding process
