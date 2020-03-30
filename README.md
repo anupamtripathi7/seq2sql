@@ -52,5 +52,7 @@ This decoder predicts the keywords ‘AND’ and ‘OR’ in the where part of t
 
 The figure below shows the decoding procedure. Consider the example query given in it. First the root decoder will be called. It will intern call the keyword decoder and this procedure goes on until the terminating condition is encountered. The training done is teacher forced, so the next decoder will have the right answer from the previous decoder. 
 
+<p align="center">
 <img src='imgs/decoding_process.png'/>
 Decoding process
+</p>
