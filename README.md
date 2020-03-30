@@ -7,13 +7,13 @@ This method, like our previous approaches, uses an encoder decoder architecture 
 <p align="center">
 <img src='imgs/encoders_and_decoders.png' height="400"/>
 <br>
-**Encodes and Decoders**
+<b>Encodes and Decoders</b>
 <br>
 </p>
 
 ## Encoders
 
-The **encoders** encode all the input to the network and pass the encodings to the decoders. 
+The encoders encode all the input to the network and pass the encodings to the decoders. 
 The encoding part is done by two encoders:
 
 
