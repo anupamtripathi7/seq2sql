@@ -54,5 +54,5 @@ The figure below shows the decoding procedure. Consider the example query given 
 
 <p align="center">
 <img src='imgs/decoding_process.png'/>
-**Decoding process**
+<b>Decoding process</b>
 </p>
