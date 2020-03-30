@@ -1,18 +1,16 @@
 # seq2sql
 
-<div style="size: 10px">
+
 Given a natural language question posed to retrieve information from a large database, the task is to translate this question to an equivalent SQL query, such that the execution of that query provides the user with the desired results. We have focussed our work on implementing a model that generalizes well for unseen data by limiting the problem to simple queries.
-</div>
 <br>
 This method, like our previous approaches, uses an encoder decoder architecture for the given task. There are multiple encoders and decoders used, which have the same model, but differ only because the input they get and the order in which they are called.
 
-<div style="text-align: center;">
 <img src='imgs/encoders_and_decoders.png' height="400"/>
 <br>
 Encodes and Decoders
-</div>
+<br>
 
-4.3.1 Encoders
+## Encoders
 
 The encoders encode all the input to the network and pass the encodings to the decoders. 
 The encoding part is done by two encoders:
@@ -22,7 +20,7 @@ Text Encoder: This encoder encodes the word vectors for the english text.
 
 Schema Encoder: This encoder is responsible for encoding the schema information of the database. We have used just the table names and column names from the schema information given in the WikiSQL dataset.  
 
-4.3.2 Decoders
+## Decoders
 
 The decoders receive all the encoding from the encoders. The decoding part is recursive, i.e. the decoder contains a call to itself. In terms of machine translation done in our previous approach, each of the RNN cell is a decoder in this method and is responsible for predicting a specific part of the SQL query.,  The decoding part is done by eight decoders (Figure 4):
 
