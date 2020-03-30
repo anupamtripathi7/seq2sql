@@ -7,7 +7,7 @@ This method, like our previous approaches, uses an encoder decoder architecture 
 <p align="center">
 <img src='imgs/encoders_and_decoders.png' height="400"/>
 <br>
-Encodes and Decoders
+**Encodes and Decoders**
 <br>
 </p>
 
@@ -54,5 +54,5 @@ The figure below shows the decoding procedure. Consider the example query given 
 
 <p align="center">
 <img src='imgs/decoding_process.png'/>
-Decoding process
+**Decoding process**
 </p>
