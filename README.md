@@ -56,3 +56,7 @@ The figure below shows the decoding procedure. Consider the example query given 
 <img src='imgs/decoding_process.png'/>
 <b>Decoding process</b>
 </p>
+<br>
+<br>
+Since the keywords SELECT and FROM are present in all the queries of the WikiSQL dataset, we have inseted those keywords manually in the appropriate positions. 
+
