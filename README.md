@@ -13,7 +13,7 @@ This method, like our previous approaches, uses an encoder decoder architecture 
 
 ## Encoders
 
-The encoders encode all the input to the network and pass the encodings to the decoders. 
+The **encoders** encode all the input to the network and pass the encodings to the decoders. 
 The encoding part is done by two encoders:
 
 
