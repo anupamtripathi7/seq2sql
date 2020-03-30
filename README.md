@@ -3,7 +3,7 @@
 
 Given a natural language question posed to retrieve information from a large database, the task is to translate this question to an equivalent SQL query, such that the execution of that query provides the user with the desired results. We have focussed our work on implementing a model that generalizes well for unseen data by limiting the problem to simple queries.
 <br>
-This method, like our previous approaches, uses an encoder decoder architecture for the given task. There are multiple encoders and decoders used, which have the same model, but differ only because the input they get and the order in which they are called.
+This method, like our previous approaches, uses an attention based encoder decoder architecture for the given task. There are multiple encoders and decoders used, which have the same model, but differ only because the input they get and the order in which they are called.
 <p align="center">
 <img src='imgs/encoders_and_decoders.png' height="400"/>
 <br>
